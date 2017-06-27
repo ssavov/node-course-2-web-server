@@ -49,6 +49,14 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'My projects',
+        projectUrl: 'https://github.com/ssavov/node-course-2-web-server',
+        projectName: 'node-course-2-web-server'
+    })
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'The World has stopped spinning!'
